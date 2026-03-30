@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "name": "Resume Builder Pro",
+    "description": "Create professional resumes with AI-powered suggestions.",
+    "price": 19.99,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "Popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "https://i.ibb.co.com/cKddRmyc/writing-2327400-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Portfolio Website Kit",
+    "description": "Build a stunning developer portfolio in minutes.",
+    "price": 9.99,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "New",
+    "features": ["Responsive design", "Custom domains", "SEO optimized"],
+    "icon": "https://i.ibb.co.com/PZygTvTK/design-tool.png"
+  },
+  {
+    "id": 3,
+    "name": "Job Tracker",
+    "description": "Track job applications and manage your career journey.",
+    "price": 4.99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "Best Seller",
+    "features": ["Application tracking", "Email reminders", "Analytics dashboard"],
+    "icon": "https://i.ibb.co.com/4wLBft5g/operation.png"
+  },
+  {
+    "id": 4,
+    "name": "Interview Prep AI",
+    "description": "Practice interviews with AI-generated questions.",
+    "price": 14.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "Popular",
+    "features": ["Mock interviews", "Instant feedback", "Question bank"],
+    "icon": "https://i.ibb.co.com/Y7y2LCNX/portfolio.png"
+  },
+  {
+    "id": 5,
+    "name": "Cover Letter Generator",
+    "description": "Generate personalized cover letters instantly.",
+    "price": 7.99,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "New",
+    "features": ["AI writing", "Multiple formats", "Download as PDF"],
+    "icon": "https://i.ibb.co.com/ynt3Zxsx/social-media.png"
+  },
+  {
+    "id": 6,
+    "name": "Freelancer Toolkit",
+    "description": "All-in-one toolkit for freelancers to manage projects.",
+    "price": 29.99,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "Best Seller",
+    "features": ["Invoice generator", "Client management", "Time tracking"],
+    "icon": "https://i.ibb.co.com/freelancer_icon.png"
+  }
+  
+]
