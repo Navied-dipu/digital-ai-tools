@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
 import { IoCheckmark } from 'react-icons/io5';
+import { toast } from 'react-toastify';
 
 export default function ModalCart({ model, carts, setCarts }) {
     const [isSubscribed, setIsSubscribed] = useState(false)
     const handleSubscribe = () => {
         setIsSubscribed(true)
+      
         const isFound = carts.find((item) => item.id === model.id);
 
         if (isFound) {
-            // toast.error("Item already in cart!");
+            toast.error("Item already in cart!");
             return;
         }
         setCarts([...carts, model])
+          toast.info("Item added to cart!");
     }
     return (
         <div> <div className="card bg-base-100 shadow-sm">

@@ -1,15 +1,16 @@
 import React from 'react'
+import { toast } from 'react-toastify';
 
 export default function Cart({carts, setCarts}) {
     const totalPrice = carts.reduce((sum, item) => sum + item.price, 0);
     const handlePayment = () => {
         setCarts([]);
-        // toast.success("Payment successful! Thank you for your purchase.");
+        toast.success("Payment successful! Thank you for your purchase.");
     }
     const handleDelete = (item) => {
         const filteredArray = carts.filter((c) => c.id !== item.id);
         setCarts(filteredArray);
-        // toast.success("Item deleted!");
+        toast.success("Item remove!");
     };
   return (
     <div className='py-10 space-y-5 max-w-5xl mx-auto'>
