@@ -9,6 +9,7 @@ import Navbar from './component/Navber'
 import Pricing from './component/Pricing'
 import Rating from './component/Rating'
 import Steps from './component/Steps'
+import CardText from './component/CardText'
 const getModels = async () => {
   const response = await fetch('/data.json')
   return response.json()
@@ -19,21 +20,26 @@ console.log(modelPromise)
 
 function App() {
 
-  // const [isActive, setIsActiveTab] = useState("model")
+  const [isActive, setIsActiveTab] = useState("model")
   const [carts, setCarts] = useState([])
   // console.log(carts)
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar carts={carts} ></Navbar>
       <Hero></Hero>
       <Rating></Rating>
-      {/* <div className="tabs tabs-box justify-center bg-transparent">
-        <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label="Model" defaultChecked onClick={() => setIsActiveTab('model')} />
-        <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label={`Cart (${carts.length})`} onClick={() => setIsActiveTab('cart')} />
+      <CardText></CardText>
+      <div className="tabs tabs-box justify-center bg-transparent">
+        <input type="radio" name="my_tabs_1" className="tab rounded-full w-40 text-black checked:bg-gradient-to-b from-[#4F39F6] to-[#9514FA] checked:text-white" aria-label="Model" defaultChecked onClick={() => setIsActiveTab('model')} />
+        <input type="radio" name="my_tabs_1" className="tab rounded-full w-40 text-black checked:bg-gradient-to-b from-[#4F39F6] to-[#9514FA] checked:text-white" aria-label={`Cart (${carts.length})`} onClick={() => setIsActiveTab('cart')} />
 
-      </div> */}
-      <Modals modelPromise={modelPromise} carts={carts} setCarts={setCarts}></Modals>
-      {/* <Cart></Cart> */}
+      </div>
+{   isActive === 'model' && (
+        <Modals modelPromise={modelPromise} carts={carts} setCarts={setCarts}></Modals>
+      )}
+      {isActive === 'cart' && (
+        <Cart carts={carts} setCarts={setCarts}></Cart>
+      )}
       <Steps></Steps>
       <Pricing></Pricing>
       <Footer></Footer>

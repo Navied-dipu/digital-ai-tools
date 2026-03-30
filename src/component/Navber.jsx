@@ -1,7 +1,7 @@
 import React from 'react'
 import { CiShoppingCart } from 'react-icons/ci'
 
-export default function Navbar() {
+export default function Navbar({ carts }) {
     return (
         <div className='max-w-5xl mx-auto '>
             <div className="navbar  ">
@@ -35,8 +35,14 @@ export default function Navbar() {
                         <li><a>FAQ</a></li>
                     </ul>
                 </div>
-                <div className="navbar-end space-x-2">
-                    <a className='text-xl'>< CiShoppingCart /></a>
+                <div className="navbar-end space-x-4">
+                    <a className="text-xl flex items-center gap-2 relative ">
+                        <CiShoppingCart className="text-2xl" />
+
+                        <span className="absolute -top-2 -right-3 text-xs bg-red-600 text-white w-5 h-5 flex items-center justify-center rounded-full">
+                            {carts.length}
+                        </span>
+                    </a>
                     <a className=''>Login</a>
                     <a className="btn  bg-gradient-to-b from-[#4F39F6] to-[#9514FA] text-white rounded-full">Button</a>
                 </div>
