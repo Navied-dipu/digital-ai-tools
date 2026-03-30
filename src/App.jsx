@@ -10,6 +10,7 @@ import Pricing from './component/Pricing'
 import Rating from './component/Rating'
 import Steps from './component/Steps'
 import CardText from './component/CardText'
+import Feature from './component/Feature'
 const getModels = async () => {
   const response = await fetch('/data.json')
   return response.json()
@@ -30,8 +31,8 @@ function App() {
       <Rating></Rating>
       <CardText></CardText>
       <div className="tabs tabs-box justify-center bg-transparent">
-        <input type="radio" name="my_tabs_1" className="tab rounded-full w-40 text-black checked:bg-gradient-to-b from-[#4F39F6] to-[#9514FA] checked:text-white" aria-label="Model" defaultChecked onClick={() => setIsActiveTab('model')} />
-        <input type="radio" name="my_tabs_1" className="tab rounded-full w-40 text-black checked:bg-gradient-to-b from-[#4F39F6] to-[#9514FA] checked:text-white" aria-label={`Cart (${carts.length})`} onClick={() => setIsActiveTab('cart')} />
+        <input type="radio" name="my_tabs_1" className="tab rounded-full w-40 text-black checked:bg-gradient-to-b from-[#4F39F6] to-[#9514FA] checked:text-white" aria-label="Products" defaultChecked onClick={() => setIsActiveTab('model')} />
+        <input type="radio" name="my_tabs_1" className="tab rounded-full w-40 text-purple-600 checked:bg-gradient-to-b from-[#4F39F6] to-[#9514FA] checked:text-white" aria-label={`Cart (${carts.length})`} onClick={() => setIsActiveTab('cart')} />
 
       </div>
 {   isActive === 'model' && (
@@ -42,6 +43,7 @@ function App() {
       )}
       <Steps></Steps>
       <Pricing></Pricing>
+      <Feature></Feature>
       <Footer></Footer>
     </>
   )

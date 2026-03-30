@@ -4,7 +4,10 @@ import rocket from '../assets/rocket.png'
 
 export default function Steps() {
     return (
-        <div className='max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 my-5'>
+       <div className='max-w-5xl mx-auto text-center my-10 space-y-5'>
+        <h2 className='text-5xl font-bold'>Get Started in 3 Steps</h2>
+        <p>Start using premium digital tools in minutes, not hours.</p>
+         <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 my-5'>
 
             <div className="card bg-base-100  shadow-lg">
                 <div className='flex justify-end mx-2 my-3'>
@@ -69,5 +72,6 @@ export default function Steps() {
                 </div>
             </div>
         </div>
+       </div>
     )
 }
